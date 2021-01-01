@@ -1,0 +1,91 @@
+/* 使用原生变量的主题颜色 */
+
+page{
+  color:var(--themeColor);
+}
+
+.swiper-box swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+
+.swiper-box swiper swiper-item image{
+  width: 100%;
+}
+
+.cate-box{
+  display: flex;
+}
+.cate-box navigator{
+  flex: 1;
+  padding: 20rpx;
+}
+
+.cate-box navigator image{
+  width: 100%;
+}
+
+/* 楼层 */
+.floor-box{
+ padding: 10rpx;
+}
+.floor-box .floor-item{
+  padding: 10rpx 0 10rpx 0 ;
+ }
+
+.floor-box .first-item-image{
+  width: 100%;
+}
+
+.second-box{
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.second-box .left-box{
+  flex: 0 0 33.33%;
+  height: 400rpx;
+  background-color: beige;
+}
+.second-box .left-box navigator{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+ .left-box navigator image{
+  width: 100%;
+  height: 400rpx;
+  
+}
+
+.second-box .right-box{
+  flex: 0 0 66.66%;
+  height: 400rpx;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.second-box .right-box .right-box-item{
+  flex: 0 0 50%;
+  height: 50%;
+  /* background-color: blue; */
+  border-left: 10rpx solid white;
+}
+
+.second-box .right-box .right-box-item image{
+  width: 100%;
+  height: 100%;
+}
+
+.second-box .right-box .right-box-item:nth-child(1){
+  border-bottom: 10rpx solid white;
+}
+.second-box .right-box .right-box-item:nth-child(2){
+  border-bottom: 10rpx solid white;
+}
+
+

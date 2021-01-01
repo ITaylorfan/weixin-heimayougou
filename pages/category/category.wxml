@@ -1,0 +1,40 @@
+<!--pages/category/category.wxml-->
+<view class="container">
+    <!-- 搜索框 -->
+    <SearchInput></SearchInput>
+
+    <!-- 左侧分类导航栏 -->
+    <view class="content-wrap">
+    <scroll-view scroll-y="{{true}}" class="leftMenu">
+       <view class="leftItem {{index===currentIndex?'acvive':''}}" 
+       wx:for="{{leftContent}}" wx:key="*this" 
+       bindtap="leftItemHandle" data-index="{{index}}">
+           {{item}}
+       </view>
+    </scroll-view>
+
+    <!-- 右侧内容栏 -->
+    <scroll-view scroll-y="{{true}}" class="rightMenu" scroll-top="{{scrollTop}}">
+        <view class="rightItem" wx:for="{{rightContent}}" wx:for-index="FIndex"
+        wx:for-item="FItem" wx:key="cat_id">
+            <view class="right-item-title">
+                / {{FItem.cat_name}} /
+            </view>
+            <!-- 子项 -->
+            <view class="item-child-box">
+            <view class="right-item-children" wx:for="{{FItem.children}}"
+            wx:for-index="CIndex" wx:for-item="CItem" wx:key="cat_id">
+                <navigator url="/pages/goods_list/goods_list?cid={{CItem.cat_id}}">
+                <view class="child-image" >
+                    <image src="{{CItem.cat_icon}}" mode="scaleToFill"/>
+                </view>
+                <view class="child-title">
+                    {{CItem.cat_name}}
+                </view>
+                </navigator>
+            </view>
+            </view>
+        </view>
+    </scroll-view>
+    </view> 
+</view>

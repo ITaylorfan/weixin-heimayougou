@@ -1,0 +1,11 @@
+<!--components/Swiper/Swiper.wxml-->
+<view class="swiper-box">
+    <swiper>
+        <swiper-item wx:for="{{SwiperData}}" wx:key="goods_id">
+            <image src="{{item.image_src}}"></image>
+        </swiper-item>
+          <swiper-item>
+            <image src=""></image>
+        </swiper-item>
+    </swiper>
+</view>

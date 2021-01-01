@@ -1,0 +1,89 @@
+.goods-list-content {
+    .cart-title {
+        color:var(--themeColor);
+    }
+  
+    .cart-main {
+      .cart-item {
+          display: flex;
+        .left {
+            flex: 1;
+          checkbox-group {
+            flex: 1;
+            checkbox {
+                flex: 1;
+            }
+          }
+        }
+  
+        .center {
+            flex: 2;
+          img {
+            flex: 1;
+          }
+        }
+  
+        .right {
+            flex: 3;
+          .goods-text {
+            flex: 1;
+          }
+  
+          .goods-price-num {
+            .price {
+                flex: 1;
+            }
+  
+            .num {
+              .reduce {
+                flex: 1;
+              }
+  
+              .currentNum {
+                flex: 1;
+              }
+  
+              .add {
+                flex: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .bottm-tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .left {
+      flex: 1;
+      checkbox-group {
+        checkbox {
+          
+        }
+      }
+    }
+  
+    .center {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .price {
+        flex: 1;
+      }
+  
+      .tip {
+        flex: 1;
+      }
+    }
+  
+    .right {
+      flex: 2;
+    }
+  }

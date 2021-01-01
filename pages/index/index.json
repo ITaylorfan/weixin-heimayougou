@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchInput":"../../components/SearchInput/SearchInput",
+    "Swiper":"../../components/Swiper/Swiper"
+  },
+  "navigationBarTitleText": "小购物-首页"
+}

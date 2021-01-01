@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="">
+  <!-- 搜索栏 -->
+  <SearchInput></SearchInput>
+
+  <!-- 轮播图 -->
+  <!-- <Swiper SwiperData="swiperData"></Swiper> -->
+  <!-- image标签存在默认宽高 320px 240px  -->
+  <!-- swiper 存在默认宽高 100% 150px -->
+  <view class="swiper-box">
+    <swiper indicator-dots="{{true}}" circular="{{true}}" autoplay="{{true}}">
+        <swiper-item wx:for="{{swiperData}}" wx:key="goods_id">
+            <navigator url="{{item.navigator_url}}"><image src="{{item.image_src}}" mode="widthFix"></image></navigator>
+        </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 分类导航 -->
+  <view class="cate-box">
+    <navigator wx:for="{{catesData}}" wx:key="name">
+      <image mode="widthFix" src="{{item.image_src}}"/>
+    </navigator>
+  </view>
+
+  <!-- 分类导航结束 -->
+
+  <!-- 楼层 -->
+  <view class="floor-box">
+    <view class="floor-item" wx:for="{{floorData}}" wx:key="index" 
+    wx:for-item="firstItem" wx:for-index="firstIndex">
+      <!-- <view class="first-item-title">
+        {{firstItem.floor_title.name}}
+      </view> -->
+      <view class="first-item-image">
+        <image mode="widthFix" src="{{firstItem.floor_title.image_src}}"/>
+      </view>
+      <!-- 子项 -->
+      <view class="second-box">
+        <view class="left-box">
+           <!-- 子项的循环项 -->
+        <navigator  wx:for="{{firstItem.product_list}}" wx:for-item="secondItem"
+      wx:for-index="secondIndex" wx:key="index"
+       url="{{secondItem.navigator_url}}" open-type="{{secondItem.open_type}}" wx:if="{{secondIndex===0}}">
+          <!-- <image src="{{secondItem.image_src}}" mode="widthFix"/> -->
+           <image src="{{secondItem.image_src}}" mode="scaleToFill"/>
+          <!-- {{secondIndex===0?'widthFix':'scaleToFill'}} -->
+        </navigator>
+        </view>
+        <view class="right-box">
+             <navigator class="right-box-item" wx:for="{{firstItem.product_list}}" wx:for-item="secondItem"
+      wx:for-index="secondIndex" wx:key="index"
+       url="{{secondItem.navigator_url}}" open-type="{{secondItem.open_type}}" wx:if="{{secondIndex>0}}">
+          <!-- <image src="{{secondItem.image_src}}" mode="widthFix"/> -->
+           <image src="{{secondItem.image_src}}" mode="scaleToFill"/>
+          <!-- {{secondIndex===0?'widthFix':'scaleToFill'}} -->
+        </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 楼层 -->
+</view>

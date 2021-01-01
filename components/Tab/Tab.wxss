@@ -1,0 +1,21 @@
+/* components/Tab/Tab.wxss */
+.tab-container{
+
+}
+
+.tab-bar{
+    display: flex;
+}
+.tab-bar .active{
+    color: var(--themeColor);
+    border-bottom: 5rpx solid var(--themeColor);
+}
+.tab-bar .tab-item{
+    flex: 1;
+    /* height: 80rpx; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 15rpx 0;
+    
+}

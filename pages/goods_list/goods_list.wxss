@@ -1,0 +1,46 @@
+/* pages/goods_list/goods_list.wxss */
+.tab-content{
+    padding: 5rpx 10rpx;
+}
+/* .tab-content .tab-content-item{
+    display: flex;
+} */
+.tab-content .tab-content-item{
+    height: 250rpx;
+    border-bottom: 5rpx #ccc solid;
+}
+.tab-content .tab-content-item navigator{
+    height: 100%;
+    display: flex;
+}
+.tab-content .tab-content-item navigator .left-image{
+    /* background-color: blue; */
+    flex: 2;
+    padding: 15rpx;
+}
+.left-image image{
+    height: 100%;
+}
+.tab-content .tab-content-item navigator .right-text{
+    flex: 3;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.right-text .goods-name{
+    /* flex: 0 0 80rpx; */
+    /* 两行显示。。。 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.right-text .goods-price{
+    /* flex: 1; */
+    font-size: 32rpx;
+    color: var(--themeColor);
+}
+

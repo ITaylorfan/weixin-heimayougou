@@ -1,0 +1,121 @@
+/* pages/goods_detail/goods_detail.wxss */
+
+.detail-container{
+    padding-bottom: 90rpx;
+}
+
+.detail-container swiper{
+    /* background-color: burlywood; */
+    height: 65vw;
+    text-align: center;
+}
+
+.detail-container swiper swiper-item{
+    width: 100%;
+}
+.detail-container swiper swiper-item image{
+    width: 60%;
+
+}
+.prcie{
+    color: var(--themeColor);
+    font-size: 32rpx;
+    font-weight: bold;
+    padding: 15rpx;
+}
+
+.text-detail-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4rpx solid #dedede;
+    border-bottom: 4rpx solid #dedede;
+    padding: 10rpx 0;
+}
+
+.text-detail-row .text-detail{
+    flex: 5;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    padding:0 10rpx;
+}
+.text-detail-row .star-box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 2rpx solid #333;
+}
+.text-detail-row .star-box .shoucang{
+    color: var(--themeColor);
+    font-size: 24rpx;
+    
+}
+
+.image-text-detail{
+
+}
+.image-text-detail .title{
+    color: var(--themeColor);
+    font-size: 32rpx;
+    font-weight: bold;
+    padding: 15rpx;
+}
+
+.bottom-tools{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4rpx solid #ccc;
+    background-color: white;
+}
+
+.bottom-tools .tools-item{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-tools .tools-item .tools-title{
+    font-size: 26rpx;
+}
+.bottom-tools .tools-item .column-item{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /*必须的 不然下面的绝对 会出问题*/
+}
+
+.bottom-tools .tools-item .column-item button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0; 
+}
+.bottom-tools .tools-btn{
+    flex: 2;
+}
+.bottom-tools .tools-btn button{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius:0;
+    font-size: 28rpx;
+}

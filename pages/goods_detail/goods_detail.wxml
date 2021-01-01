@@ -1,0 +1,57 @@
+<!-- pages/goods_detail/goods_detail.wxml -->
+<view class="detail-container">
+    <swiper indicator-dots="{{true}}" circular="{{true}}">
+        <swiper-item class="" wx:for="{{detailData.pics}}" wx:key="index">
+            <image mode="widthFix" src="{{item.pics_mid_url}}" bindtap="prevImage" data-url="{{item.pics_mid_url}}" />
+        </swiper-item>
+    </swiper>
+    <view class="prcie">￥{{detailData.goods_price}}</view>
+    <view class="text-detail-row">
+        <!-- 左边的文字详情 -->
+        <view class="text-detail">
+            {{detailData.goods_name}}
+             {{detailData.goods_name}}
+        </view>
+        <!-- 右边的收藏 -->
+        <view class="star-box">
+            <view class="iconfont .icon-shoucang"></view>
+            <viwe class="shoucang">收藏</viwe>
+        </view>
+    </view>
+    <!-- 图文详情 -->
+    <view class="image-text-detail">
+        <view class="title">图文详情</view>
+        <view class="rich-text-content">
+            <rich-text nodes="{{detailData.goods_introduce}}"></rich-text>
+        </view>
+    </view>
+    <!-- 底部工具栏 -->
+    <view class="bottom-tools">
+        <view class="tools-item">
+             <view class="column-item">
+            <view class="iconfont icon-kefu"></view>
+            <view class="tools-title">客服</view>
+            <button open-type="contact"></button>
+            </view>    
+        </view>
+        <view class="tools-item">
+            <view class="column-item">
+            <view class="iconfont icon-fenxiang"></view>
+            <view class="tools-title">分享</view>
+            <button open-type="share"></button>
+            </view>
+        </view>
+        <view class="tools-item">
+            <navigator open-type="switchTab" url="/pages/cart/cart" class="column-item">
+            <view class="iconfont icon-gouwuchekong"></view>
+            <view class="tools-title">购物车</view>
+            </navigator>
+        </view>
+          <view class="tools-item tools-btn">
+            <button bindtap="addIntoCart" style="background-color:#FFB205;">加入购物车</button>
+        </view>
+        <view class="tools-item tools-btn">
+            <button style="background-color:#FF6C60;">立即购买</button>
+        </view>
+    </view>
+</view>
