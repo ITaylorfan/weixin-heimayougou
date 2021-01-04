@@ -16,7 +16,7 @@
     align-items: flex-start;
     width: 100%;
     padding: 20rpx;
-    border-bottom: 4rpx solid var(--themeColor);
+    /* border-bottom: 4rpx solid var(--themeColor); */
 }
 
 .cart-container .addressContent .contentLeft{
@@ -39,6 +39,7 @@
 .goods-list-content .cart-title {
     color: var(--themeColor);
     border-bottom: 4rpx solid currentColor;
+    border-top: 4rpx solid currentColor;
     font-size: 32rpx;
     font-weight: bold;
     padding: 15rpx;
@@ -51,7 +52,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 150rpx;
+    height: 180rpx;
     padding: 15rpx;
     border-bottom: 2rpx solid #ccc;
   }
@@ -84,7 +85,7 @@
   }
   .goods-list-content .cart-main .cart-item .right .goods-text {
     width: 100%;
-    flex: 1;
+    flex:0 0 64rpx;
     font-size: 24rpx;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -103,6 +104,7 @@
   .goods-list-content .cart-main .cart-item .right .goods-price-num .price {
     flex: 2;
     color: var(--themeColor);
+    font-size: 32rpx;
   }
   .goods-list-content .cart-main .cart-item .right .goods-price-num .num{
     flex: 1;
@@ -116,7 +118,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    font-size: 40rpx;
   }
   .goods-list-content .cart-main .cart-item .right .goods-price-num .num .currentNum {
     flex: 1;
@@ -124,6 +126,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 10rpx;
+    font-size: 32rpx;
   }
   .goods-list-content .cart-main .cart-item .right .goods-price-num .num .add {
     flex: 1;
@@ -131,6 +134,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 40rpx;
   }
 
 

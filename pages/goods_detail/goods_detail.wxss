@@ -49,11 +49,16 @@
     align-items: center;
     border-left: 2rpx solid #333;
 }
+.text-detail-row .star-box .icon-shoucang,.icon-shoucang1{
+    color: var(--themeColor);
+   
+}
 .text-detail-row .star-box .shoucang{
     color: var(--themeColor);
     font-size: 24rpx;
     
 }
+
 
 .image-text-detail{
 

@@ -1,14 +1,15 @@
 /* components/Tab/Tab.wxss */
 .tab-container{
-
+    
 }
 
 .tab-bar{
     display: flex;
+    /* border-bottom: 4rpx solid #cccccc; */
 }
 .tab-bar .active{
     color: var(--themeColor);
-    border-bottom: 5rpx solid var(--themeColor);
+    border-bottom: 5rpx solid var(--themeColor) !important;
 }
 .tab-bar .tab-item{
     flex: 1;
@@ -17,5 +18,5 @@
     justify-content: center;
     /* align-items: center; */
     padding: 15rpx 0;
-    
+    border-bottom: 4rpx solid #cccccc;
 }

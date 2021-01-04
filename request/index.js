@@ -2,6 +2,15 @@
 let ajaxTimes=0;
 // 封装请求方法
 export const Request=params=>{
+
+    // 封装请求头 无须在请求的时候添加请求头
+    if(params.url.includes("/my/")){
+        params.header={
+            Authorization:wx.getStorageSync("token")
+        }
+    }
+
+
     ajaxTimes++
     wx.showLoading({
         title:"加载中" ,

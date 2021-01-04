@@ -9,9 +9,48 @@ Page({
     //存放商品详情的数据
     detailData:{},
     //存放完整数据
-    totalDetailData:{}
+    totalDetailData:{},
+    // 判断是否收藏
+    isCollect:false
   },
-
+  // 收藏控制函数
+  handleCollect(e){
+    console.log(e)
+    //收藏状态取反
+    let isCollect=!this.data.isCollect
+    let collect=wx.getStorageSync("collect")||[];
+    let index=collect.findIndex(v=>v.goods_id===this.data.totalDetailData.goods_id)
+    if(index===-1){
+      //没有收藏
+      //加入收藏数组
+      collect.push(this.data.totalDetailData)
+      wx.showToast({
+        title: '收藏成功！',
+        icon: 'success',
+        image: '',
+        duration: 1500,
+        mask: true
+      });
+    }else{
+      //有收藏
+      //删除
+      collect.splice(index,1)
+      wx.showToast({
+        title: '取消成功！',
+        icon: 'success',
+        image: '',
+        duration: 1500,
+        mask: true
+      });
+    }
+    //保存收藏数组
+    wx.setStorageSync("collect",collect);
+    // 保存收藏标识
+    this.setData({
+      isCollect
+    })
+  },
+  // 获取页面详细信息
   async getGoodData(data){
     const res=await Request({url:"/goods/detail",data})
     console.log(res)
@@ -32,6 +71,14 @@ Page({
         goods_introduce:res.data.message.goods_introduce.replace(/\.webp/g,'.jpg'),
         goods_id:res.data.message.goods_id
       }
+    })
+
+    // 获取用户的收藏列表信息
+    let collect=wx.getStorageSync("collect")||[];
+    // 判断是否收藏当前商品
+    let isCollect=collect.some(v=>v.goods_id===this.data.detailData.goods_id)
+    this.setData({
+      isCollect
     })
   },
 

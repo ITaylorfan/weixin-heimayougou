@@ -1,1 +1,37 @@
 /* pages/order/order.wxss */
+.order-item-wrapper{
+
+}
+
+.order-item-wrapper .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20rpx;
+    border-bottom: 2rpx solid #cccccc;
+}
+
+.order-item-wrapper .item .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.order-item-wrapper .item .row .price{
+    color: var(--themeColor);
+    font-size: 34rpx;
+}
+.order-item-wrapper .item .row .title{
+    flex: 1;
+    color: #666666;
+}
+
+.order-item-wrapper .item .row .data{
+    flex: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

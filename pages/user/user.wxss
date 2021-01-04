@@ -1,1 +1,270 @@
 /* pages/user/user.wxss */
+.user-info-container {
+  height: 45vh;
+  position: relative;
+}
+.user-info-container .bg-image {
+  width: 100%;
+  height: 100%;
+}
+.user-info-container .bg-image image {
+    
+    height: 100%;
+  }
+  .user-info-container .login{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 20%;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40rpx;
+    border-radius: 10rpx;
+    
+  }
+  .user-info-container .avatar-name-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-info-container .avatar-name-wrapper .avatar {
+    flex: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-info-container .avatar-name-wrapper .avatar image {
+    width: 40%;
+    border-radius: 50%;
+  }
+  .user-info-container .avatar-name-wrapper .username {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  /* 用户历史信息 */
+  .user-main-container{
+    background-color: #EDECE8;
+    padding-bottom: 20rpx;
+  }
+  .user-history-container {
+    width: 95%;
+    height: 90rpx;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    top: -45rpx;
+  }
+  .user-history-container .history-item{
+    flex: 1;  
+  }
+  .user-history-container .history-item  navigator{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user-history-container .history-item .item-num {
+    color: var(--themeColor);
+  }
+  .user-history-container .history-item .item-title {
+    font-size: 28rpx;
+  }
+
+  /* 用户订单 */
+  .order-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+  }
+  .order-container .order-title {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2rpx solid #E6E6E6;
+    padding:20rpx;
+  }
+  .order-container .order-item-row {
+    width: 100%;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20rpx 0;
+  }
+  .order-container .order-item-row .order-item {
+    flex: 1;
+  }
+  .order-container .order-item-row .order-item .item-icon {
+    font-size: 32rpx;
+    color: var(--themeColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bigFont{
+    font-size: 42rpx !important;
+  }
+  .order-container .order-item-row .order-item .item-title {
+    font-size: 24rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+  
+  /* 收货地址管理 */
+
+  .goods-address-container navigator{
+    width: 95%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 24rpx;
+    padding:20rpx 0;
+  }
+
+  .goods-address-container .address-title{
+    flex: 5;
+    padding-left:20rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .goods-address-container .address-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36rpx;
+    color: #acacac;
+  }
+
+
+  /* 客服 服务区块 */
+
+  .service-container{
+    width: 95%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    /* margin-top: 24rpx; */
+    padding:20rpx 0;
+  }
+  .service-container .service-item{
+    flex: 1;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 2rpx solid; */
+    margin-bottom: 5rpx;
+    background-color: white;
+    padding:20rpx 0;
+  }
+  .service-container .service-item button{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  .service-container .service-item .service-title{
+    flex: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:20rpx;
+  }
+  .service-container .service-item .service-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36rpx;
+    color: #acacac;
+  }
+
+  .service-container .service-item .kefu{
+    flex: 3;
+    font-size: 28rpx;
+  }
+
+  /* 分享应用 */
+  .share-container {
+    width: 95%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 24rpx;
+    padding:20rpx 0;
+    
+  }
+  .share-container button{
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  .share-container .share-title{
+    flex: 5;
+    padding-left:20rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .share-container .share-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36rpx;
+    color: #acacac;
+  }

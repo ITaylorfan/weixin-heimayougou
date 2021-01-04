@@ -1,1 +1,46 @@
 /* pages/search/search.wxss */
+page{
+    background-color:#EDECE8 ;
+}
+.search-row{
+    height: 90rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15rpx;
+}
+.search-row .search-input{
+    flex: 6;
+    height: 100%;
+    background-color: white;
+    margin-right: 20rpx;
+}
+.search-row .search-input input{
+    height: 100%;
+}
+.search-row button{
+    flex: 1;
+    height: 100%;
+    padding: 0;
+    font-size: 28rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-content{
+    padding: 15rpx;
+}
+
+.search-content .content-item{
+    /* 让文字一行显示 超出显示省略号 */
+    /* 超出显示省略号 */
+    text-overflow: ellipsis;
+    /* 空格也不换行 */
+    white-space: nowrap;
+    overflow: hidden; 
+    
+    padding: 15rpx 0;
+    border-bottom: 2rpx solid #ccc;
+}

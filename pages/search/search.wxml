@@ -1,2 +1,20 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="search-row">
+    <view class="search-input">
+        <input type="text" />
+    </view>
+    <button >取消</button>
+   
+</view>
+
+<view class="search-content">
+     <!-- lorem快速打印一段文字 英语  lorem3 生成指定数量-->
+    <navigator class="content-item" target="" url="" open-type="navigate">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iure vero voluptates, hic, culpa ipsa ducimus autem minima reiciendis facilis ea odit quo tempore mollitia! Voluptatum tempore ea sequi id.
+    </navigator>
+    <navigator class="content-item" target="" url="" open-type="navigate">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iure vero voluptates, hic, culpa ipsa ducimus autem minima reiciendis facilis ea odit quo tempore mollitia! Voluptatum tempore ea sequi id.
+    </navigator>
+    
+</view>
+

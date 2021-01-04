@@ -1,2 +1,130 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<!-- pages/user/user.wxml -->
+<!-- 用户个人信息 -->
+<view class="user-info-container">
+    <view class="bg-image">
+        <image src="{{bgUrl?bgUrl:userInfo.avatarUrl}}" mode="scaleToFill" />
+    </view>
+    <view class="avatar-name-wrapper" wx:if="{{userInfo.nickName}}">
+        <view class="avatar">
+            <image src="{{userInfo.avatarUrl}}" mode="widthFix" />
+        </view>
+        <view class="username">{{userInfo.nickName}}</view>
+    </view>
+    <navigator wx:else class="login" target="" url="/pages/login/login" hover-class="navigator-hover" open-type="navigate">
+        登录
+    </navigator>
+</view>
+<!-- 下面的主要内容盒子 -->
+<view class="user-main-container">
+    <!-- 浏览历史区块 -->
+    <view class="user-history-container">
+        <view class="history-item">
+            <navigator class="" url="/pages/collect/collect" open-type="navigate">
+            <view class="item-num">0</view>
+            <view class="item-title">收藏的店铺</view>
+            </navigator>
+        </view>
+        <view class="history-item">
+            <navigator class="" url="/pages/collect/collect" open-type="navigate">
+            <view class="item-num">{{collectNum}}</view>
+            <view class="item-title">收藏的商品</view>
+            </navigator>
+        </view>
+        <view class="history-item">
+            <navigator class="" url="/pages/collect/collect" open-type="navigate">
+            <view class="item-num">0</view>
+            <view class="item-title">关注的商品</view>
+            </navigator>
+        </view>
+        <view class="history-item">
+            <navigator class="" url="/pages/collect/collect" open-type="navigate">
+            <view class="item-num">0</view>
+            <view class="item-title">我的足迹</view>
+            </navigator>
+        </view>
+    </view>
+    <!-- 订单区块 -->
+    <view class="order-container">
+        <view class="order-title">我的订单</view>
+        <view class="order-item-row">
+            <view class="order-item">
+                <navigator class="" url="/pages/order/order?type=1"  open-type="navigate">
+                <view class="item-icon iconfont icon-dingdan"></view>
+                <view class="item-title">全部订单</view>
+                </navigator>
+            </view>
+             <view class="order-item">
+                <navigator class="" url="/pages/order/order?type=2"  open-type="navigate">
+                <view class="item-icon iconfont icon-fukuantongzhi bigFont"></view>
+                <view class="item-title">待付款</view>
+                </navigator>
+            </view>
+             <view class="order-item">
+                 <navigator class="" url="/pages/order/order?type=3"  open-type="navigate">
+                <view class="item-icon iconfont icon-shouhuodizhi"></view>
+                <view class="item-title">待收货</view>
+                </navigator>
+            </view>
+             <view class="order-item">
+                <view class="item-icon iconfont icon-tuihuo"></view>
+                <view class="item-title">退款/退货</view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 收货地址管理 -->
+    <view class="goods-address-container">
+        <navigator class="" target="" url="" open-type="navigate">
+        <view class="address-title">
+            收货地址管理
+        </view>
+        <view class="address-icon">
+            ＞
+        </view>
+        </navigator>
+    </view>
+
+    <!-- 联系客服 等区块-->
+    <view class="service-container">
+        <view class="contact-box service-item">
+            <button open-type="contact"></button>
+            <view class="service-title">
+                联系客服
+            </view>
+            <view class="service-icon kefu">
+                 400-800-5200
+            </view>
+        </view>
+        <view class="feedback service-item">
+             <button open-type="feedback"></button>
+            <view class="service-title">
+                意见反馈
+            </view>
+            <view class="service-icon">
+                 ＞
+            </view>
+        </view>
+
+        <view class="about-us service-item">
+             <button open-type="openSetting"></button>
+            <view class="service-title">
+                关于我们
+            </view>
+            <view class="service-icon">
+                 ＞
+            </view>
+        </view>
+    </view>
+
+    <!-- 分享应用区块 -->
+    <view class="share-container">
+        <button open-type="share"></button>
+        <view class="share-title">
+            把应用推荐给其他人
+        </view>
+        <view class="share-icon">
+            ＞
+        </view>
+       
+    </view>
+</view>

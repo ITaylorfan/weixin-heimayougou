@@ -1,0 +1,85 @@
+.user-info-container {
+  position: relative;
+  height: 45vh;
+}
+.user-info-container .bg-image {
+  width: 100%;
+  height: 100%;
+}
+.user-info-container .bg-image image {
+  width: 100%;
+}
+.user-info-container .avatar-name-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-info-container .avatar-name-wrapper .avatar {
+  flex: 2;
+}
+.user-info-container .avatar-name-wrapper .avatar image {
+  width: 100%;
+  border-radius: 50%;
+}
+.user-info-container .avatar-name-wrapper .username {
+  flex: 1;
+}
+.user-history-container {
+  width: 100%;
+  height: 90rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-history-container .history-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.user-history-container .history-item .item-num {
+  color: var(--themeColor);
+}
+.user-history-container .history-item .item-title {
+  font-size: 32rpx;
+}
+
+
+.order-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.order-container .order-title {
+  flex: 1;
+}
+.order-container .order-item-row {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-container .order-item-row .order-item {
+  flex: 1;
+}
+.order-container .order-item-row .order-item .item-icon {
+  font-size: 22rpx;
+}
+.order-container .order-item-row .order-item .item-title {
+  font-size: 22rpx;
+}

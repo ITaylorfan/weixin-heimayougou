@@ -13,9 +13,9 @@
              {{detailData.goods_name}}
         </view>
         <!-- 右边的收藏 -->
-        <view class="star-box">
-            <view class="iconfont .icon-shoucang"></view>
-            <viwe class="shoucang">收藏</viwe>
+        <view class="star-box" bindtap="handleCollect">
+            <view class="iconfont {{isCollect?'icon-shoucang1':'icon-shoucang'}}"></view>
+            <viwe class="shoucang">{{isCollect?'取消收藏':'点击收藏'}}</viwe>
         </view>
     </view>
     <!-- 图文详情 -->

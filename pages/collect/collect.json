@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "Tab":"../../components/Tab/Tab"
+  },
+  "navigationBarTitleText": "小购物-商品收藏"
 }

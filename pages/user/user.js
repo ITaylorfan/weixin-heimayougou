@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 存放用户信息
+    bgUrl:"http://itaylorfan.top:8081/materials/MusicPlayer/bg.jpg",
+    userInfo:{},
+    collectNum:0
   },
 
   /**
@@ -26,7 +29,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let userInfo=wx.getStorageSync("userInfo")||{};
+    //获取收藏个数
+    let collect=wx.getStorageSync("collect")||[];
+    let collectNum=collect.length
 
+      // 赋值
+      this.setData({
+        userInfo,
+        collectNum
+      })
+    
   },
 
   /**
