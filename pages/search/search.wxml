@@ -1,20 +1,17 @@
 <!--pages/search/search.wxml-->
 <view class="search-row">
-    <view class="search-input">
-        <input type="text" />
+    <view class="search-input {{!isFocus?'clearMargin':''}}">
+        <input type="text" value="{{inputValue}}" bindinput="handleInput" placeholder="请输入要搜索的内容" />
     </view>
-    <button >取消</button>
+    <button hidden="{{!isFocus}}" bindtap="handleCancel" >取消</button>
    
 </view>
 
+<!-- 渲染搜索页面的数据 -->
 <view class="search-content">
      <!-- lorem快速打印一段文字 英语  lorem3 生成指定数量-->
-    <navigator class="content-item" target="" url="" open-type="navigate">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iure vero voluptates, hic, culpa ipsa ducimus autem minima reiciendis facilis ea odit quo tempore mollitia! Voluptatum tempore ea sequi id.
-    </navigator>
-    <navigator class="content-item" target="" url="" open-type="navigate">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iure vero voluptates, hic, culpa ipsa ducimus autem minima reiciendis facilis ea odit quo tempore mollitia! Voluptatum tempore ea sequi id.
-    </navigator>
-    
+    <navigator wx:for="{{queryList}}" class="content-item" target="" url="" open-type="navigate" wx:key="goods_id">
+        {{item.goods_name}}
+    </navigator>    
 </view>
 

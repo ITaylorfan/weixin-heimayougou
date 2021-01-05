@@ -17,7 +17,7 @@
 
   <!-- 分类导航 -->
   <view class="cate-box">
-    <navigator wx:for="{{catesData}}" wx:key="name">
+    <navigator wx:for="{{catesData}}" open-type="{{index===0?'switchTab':'navigate'}}" wx:key="name" url="{{index===0?'/pages/category/category':''}}">
       <image mode="widthFix" src="{{item.image_src}}"/>
     </navigator>
   </view>

@@ -80,7 +80,11 @@ Page({
   onLoad: function (options) {
     //console.log(options);
     //把页面传过来的参数赋值给 请求参数列表
-    this.QueryParams.cid=options.cid
+    if(options.cid){
+      this.QueryParams.cid=options.cid
+    }else if(options.query){
+      this.QueryParams.query=options.query
+    }
     console.log(this.QueryParams)
     this.getGoodsListData()
   },

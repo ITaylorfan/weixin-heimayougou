@@ -55,7 +55,7 @@
             </view>
              <view class="order-item">
                 <navigator class="" url="/pages/order/order?type=2"  open-type="navigate">
-                <view class="item-icon iconfont icon-fukuantongzhi bigFont"></view>
+                <view class="item-icon iconfont icon-fukuantongzhi"></view>
                 <view class="item-title">待付款</view>
                 </navigator>
             </view>
@@ -96,7 +96,7 @@
             </view>
         </view>
         <view class="feedback service-item">
-             <button open-type="feedback"></button>
+            <button open-type="feedback"></button>
             <view class="service-title">
                 意见反馈
             </view>

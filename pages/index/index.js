@@ -11,6 +11,13 @@ Page({
   getFloorData(){
     Request({url:"/home/floordata"})
     .then(success=>{
+      console.log(success.data.message[0].product_list[0].navigator_url.replace("?","/goods_list?"))
+      console.log(success.data.message)
+      success.data.message.forEach((item,index)=>{
+        item.product_list.forEach((item,index)=>{
+          item.navigator_url=item.navigator_url.replace("?","/goods_list?")
+        })
+      })
       this.setData({
         floorData: success.data.message
       })
@@ -24,6 +31,13 @@ Page({
   getSwiperData(){
     Request({ url: "/home/swiperdata" })
     .then(success => {
+      // console.log(success.data.message[0].navigator_url.indexOf("main"))
+      // console.log(success.data.message[0].navigator_url.replace("main","goods_detail"))
+      //对轮播图进行链接修改
+      success.data.message.forEach((item,index)=>{
+        item.navigator_url=item.navigator_url.replace("main","goods_detail")
+      })
+
       this.setData({
         swiperData: success.data.message
       })
@@ -33,7 +47,7 @@ Page({
   },
   // 获取分类信息
   getCatesData(){
-    Request({ url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems" })
+    Request({ url: "/home/catitems" })
     .then(success => {
       this.setData({
         catesData: success.data.message
